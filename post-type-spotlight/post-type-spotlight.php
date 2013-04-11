@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/extend/plugins/
 Description: Allows admin chosen post types to have a featured post check box on the edit screen. Also adds appropriate classes to front end post display, and allows featured posts to be queried via a post meta field.
 Version: 1.0.1
 Author: Linchpin
-Author URI: http://linchpinagency.com
+Author URI: http://linchpinagency.com/?utm_source=post-type-spotlight&utm_medium=plugin-admin-page&utm_campaign=wp-plugin
 License: GPLv2
 */
 
