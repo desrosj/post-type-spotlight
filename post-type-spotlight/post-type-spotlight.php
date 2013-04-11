@@ -23,13 +23,27 @@ if ( ! class_exists( 'Post_Type_Spotlight' ) ) {
 		 * @return void
 		 */
 		function __construct() {
-			add_action( 'admin_init', array( $this, 'admin_init' ) );
-			add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
-			add_action( 'save_post', array( $this, 'save_post' ) );
+			add_action( 'widgets_init',    array( $this, 'widgets_init' ) );
+			add_action( 'admin_init',      array( $this, 'admin_init' ) );
+			add_action( 'add_meta_boxes',  array( $this, 'add_meta_boxes' ) );
+			add_action( 'save_post',       array( $this, 'save_post' ) );
 			add_action( 'edit_attachment', array( $this, 'save_post' ) );
-			add_action( 'pre_get_posts', array( $this, 'pre_get_posts' ) );
+			add_action( 'pre_get_posts',   array( $this, 'pre_get_posts' ) );
 
-			add_filter( 'post_class', array( $this, 'post_class' ), 10, 3 );
+			add_filter( 'post_class',      array( $this, 'post_class' ), 10, 3 );
+		}
+
+		/**
+		 * widgets_init function.
+		 *
+		 * @access public
+		 * @return void
+		 */
+		function widgets_init() {
+			include_once( plugin_dir_path( __FILE__ ) . '/pts-featured-posts-widget.php' );
+
+			if ( class_exists( 'PTS_Featured_Posts_Widget' ) )
+				register_widget( 'PTS_Featured_Posts_Widget' );
 		}
 
 		/**
