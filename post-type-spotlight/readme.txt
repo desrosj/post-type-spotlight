@@ -3,7 +3,7 @@ Contributors: linchpin_agency, desrosj
 Tags: featured, post type, sticky, posts, custom post types
 Requires at least: 3.1
 Tested up to: 3.5.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ This snippet of code will fetch the 10 most recent posts that are featured.
 5. Shows featured posts in post edit tables.
 
 == Changelog ==
+
+= 1.0.1 =
+* The plugin should only allow public post types to be checked off on the settings page.
 
 = 1.0 =
 * Hello world!
